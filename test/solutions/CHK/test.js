@@ -8,7 +8,8 @@ const invalidRequest1 = null
 const invalidRequest2 = 'INVALID'
 
 const validRequest1 = 'ABCD'
-const validRequest2 = 'AAABBCD'
+const validRequest2 = 'AAA'
+const validRequest3 = 'AAABBCD'
 
 describe('Checkout: invalid requests', function () {
   it('Should return -1 if input is invalid', function () {
@@ -21,15 +22,15 @@ describe('Checkout: invalid requests', function () {
 });
 
 describe('Checkout: valid requests', function () {
-  // it('Should return 115', function () {
-  //   assert.equal(checkout(validRequest1), 115);
-  // });
-
-  // it('Should return 210', function () {
-  //   assert.equal(checkout(validRequest2), 210);
-  // });
+  it('Should return 115', function () {
+    assert.equal(checkout(validRequest1), 115);
+  });
 
   it('Should return 130', function () {
-    assert.equal(checkout('AAA'), 130);
+    assert.equal(checkout(validRequest2), 130);
+  });
+
+  it('Should return 210', function () {
+    assert.equal(checkout(validRequest3), 210);
   });
 });
