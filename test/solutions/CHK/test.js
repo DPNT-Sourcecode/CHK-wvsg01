@@ -27,4 +27,3 @@ describe('Checkout', function () {
   //   assert.equal(checkout(request1), 115);
   // });
 });
-
