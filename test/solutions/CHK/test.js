@@ -21,15 +21,15 @@ describe('Checkout: invalid requests', function () {
 });
 
 describe('Checkout: valid requests', function () {
-  it('Should return 115', function () {
-    assert.equal(checkout(validRequest1), 115);
-  });
+  // it('Should return 115', function () {
+  //   assert.equal(checkout(validRequest1), 115);
+  // });
 
   // it('Should return 210', function () {
   //   assert.equal(checkout(validRequest2), 210);
   // });
 
-  it('Should return 210', function () {
-    assert.equal(checkout(validRequest2), 210);
+  it('Should return 130', function () {
+    assert.equal(checkout('AAA'), 130);
   });
 });
