@@ -12,10 +12,6 @@ describe('Checkout: invalid requests', function () {
   it('Should return -1 if input is invalid', function () {
     assert.equal(checkout('INVALID'), -1)
   })
-
-  it('Should return -1 if input is empty', function () {
-    assert.equal(checkout(''), -1)
-  })
 })
 
 describe('Checkout: valid requests', function () {
@@ -29,5 +25,9 @@ describe('Checkout: valid requests', function () {
 
   it('Should return 210', function () {
     assert.equal(checkout('AAABBCD'), 210)
+  })
+
+  it('Should return 0 if input is empty', function () {
+    assert.equal(checkout(''), 0)
   })
 })
