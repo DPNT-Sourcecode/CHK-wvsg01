@@ -15,29 +15,29 @@ const checkout = require('../../../lib/solutions/CHK/checkout')
 // })
 
 describe('Checkout: valid requests', function () {
-  // it('Should return 200', function () {
-  //   assert.equal(checkout('AAAAA'), 200)
-  // })
+  it('Should return 200', function () {
+    assert.equal(checkout('AAAAA'), 200)
+  })
 
-  // it('Should return 330', function () {
-  //   assert.equal(checkout('AAAAAAAA'), 330)
-  // })
+  it('Should return 330', function () {
+    assert.equal(checkout('AAAAAAAA'), 330)
+  })
 
-  // it('Should return 245', function () {
-  //   assert.equal(checkout('AAAAABB'), 245)
-  // })
+  it('Should return 245', function () {
+    assert.equal(checkout('AAAAABB'), 245)
+  })
 
-  // it('Should return 320', function () {
-  //   assert.equal(checkout('AAAAABBCDE'), 320)
-  // })
+  it('Should return 320', function () {
+    assert.equal(checkout('AAAAABBCDE'), 320)
+  })
 
-  // it('Should return 95', function () {
-  //   assert.equal(checkout('BBEE'), 95)
-  // })
+  it('Should return 95', function () {
+    assert.equal(checkout('BBEE'), 95)
+  })
 
-  // it('Should return 80', function () {
-  //   assert.equal(checkout('EE'), 80)
-  // })
+  it('Should return 80', function () {
+    assert.equal(checkout('EE'), 80)
+  })
 
   it('Should return 160', function () {
     assert.equal(checkout('EEEEBB'), 160)
@@ -47,9 +47,9 @@ describe('Checkout: valid requests', function () {
     assert.equal(checkout('BEBEEE'), 160)
   })
 
-  // it('Should return 280', function () {
-  //   assert.equal(checkout('ABCDEABCDE'), 280)
-  // })
+  it('Should return 280', function () {
+    assert.equal(checkout('ABCDEABCDE'), 280)
+  })
 })
 
 
@@ -66,4 +66,5 @@ describe('Checkout: valid requests', function () {
 */
 
 // 40 + 40 + 40 + 40 + 30 + 30 - 60
+
 
