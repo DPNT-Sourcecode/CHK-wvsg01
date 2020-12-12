@@ -28,8 +28,8 @@ describe('Checkout: valid requests', function () {
   //   assert.equal(checkout('AAAAAAAAA'), 280)
   // })
 
-  it('Should return 200', function () {
-    assert.equal(checkout('AAAAA'), 200)
+  it('Should return 330', function () {
+    assert.equal(checkout('AAAAAAAA'), 330)
   })
 
 
@@ -75,6 +75,7 @@ describe('Checkout: valid requests', function () {
 */
 
 // 40 + 40 + 40 + 40 + 30 + 30 - 60
+
 
 
 
