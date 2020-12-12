@@ -4,42 +4,17 @@ var it = mocha.it
 var assert = require('assert')
 const checkout = require('../../../lib/solutions/CHK/checkout')
 
-// describe('Checkout: invalid requests', function () {
-//   it('Should return -1 if input is null', function () {
-//     assert.equal(checkout(null), -1)
-//   })
-
-//   it('Should return -1 if input is invalid', function () {
-//     assert.equal(checkout('INVALID'), -1)
-//   })
-// })
-
-describe('Checkout: valid requests', function () {
-  // it('Should return 200', function () {
-  //   assert.equal(checkout('AAAAA'), 200)
-  // })
-
-  // it('Should return 400', function () {
-  //   assert.equal(checkout('AAAAAAAAAA'), 400)
-  // })
-
-
-  // it('Should return 280', function () {
-  //   assert.equal(checkout('AAAAAAAAA'), 280)
-  // })
-
-
-
-  // it('Should return 330', function () {
-  //   assert.equal(checkout('AAAAAAAA'), 330)
-  // })
-
-
-
-  it('Should return 320', function () {
-    assert.equal(checkout('AAAAABBCDE'), 320)
+describe('Checkout: invalid requests', function () {
+  it('Should return -1 if input is null', function () {
+    assert.equal(checkout(null), -1)
   })
 
+  it('Should return -1 if input is invalid', function () {
+    assert.equal(checkout('INVALID'), -1)
+  })
+})
+
+describe('Checkout: valid requests', function () {
   it('Should return 110', function () {
     assert.equal(checkout('BBEE'), 110)
   })
@@ -60,20 +35,3 @@ describe('Checkout: valid requests', function () {
     assert.equal(checkout('ABCDEABCDE'), 280)
   })
 })
-
-
-/*
-+------+-------+------------------------+
-| Item | Price | Special offers         |
-+------+-------+------------------------+
-| A    | 50    | 3A for 130, 5A for 200 |
-| B    | 30    | 2B for 45              |
-| C    | 20    |                        |
-| D    | 15    |                        |
-| E    | 40    | 2E get one B free      |
-+------+-------+------------------------+
-*/
-
-// BBEE 30 30 40 40 - 30 = 110
-
-// 40 + 40 + 40 + 40 + 30 + 30 - 60
