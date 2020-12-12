@@ -39,4 +39,3 @@ describe('Checkout: valid requests', function () {
     assert.equal(checkout('EE'), 80)
   })
 })
-
