@@ -10,7 +10,7 @@ const invalidRequest2 = 'INVALID'
 const validRequest1 = 'ABCD'
 const validRequest2 = 'AAABBCD'
 
-describe('Checkout', function () {
+describe('Checkout: invalid requests', function () {
   it('Should return -1 if input is invalid', function () {
     assert.equal(checkout(invalidRequest1), -1);
   });
@@ -18,12 +18,14 @@ describe('Checkout', function () {
   it('Should return -1 if input is invalid', function () {
     assert.equal(checkout(invalidRequest2), -1);
   });
+});
 
-  // it('Should return 0 if input is empty', function () {
-  //   assert.equal(checkout(''), 0);
-  // });
+describe('Checkout: valid requests', function () {
+  it('Should return 115', function () {
+    assert.equal(checkout(validRequest1), 115);
+  });
 
-  // it('Should return the price without promotions', function () {
-  //   assert.equal(checkout(request1), 115);
-  // });
+  it('Should return -1 if input is invalid', function () {
+    assert.equal(checkout(invalidRequest2), -1);
+  });
 });
