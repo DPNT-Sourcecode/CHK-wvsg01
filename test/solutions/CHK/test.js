@@ -4,6 +4,18 @@ var it = mocha.it
 var assert = require('assert')
 const checkout = require('../../../lib/solutions/CHK/checkout')
 
+/*
+  +------+-------+------------------------+
+  | Item | Price | Special offers         |
+  +------+-------+------------------------+
+  | A    | 50    | 3A for 130, 5A for 200 |
+  | B    | 30    | 2B for 45              |
+  | C    | 20    |                        |
+  | D    | 15    |                        |
+  | E    | 40    | 2E get one B free      |
+  +------+-------+------------------------+
+*/
+
 describe('Checkout: invalid requests', function () {
   it('Should return -1 if input is null', function () {
     assert.equal(checkout(null), -1)
@@ -31,8 +43,8 @@ describe('Checkout: valid requests', function () {
     assert.equal(checkout('AAAAABBCDE'), 320)
   })
 
-  it('Should return 320', function () {
-    assert.equal(checkout('AAAAABBCDEE'), 320)
+  it('Should return 95', function () {
+    assert.equal(checkout('BBEE'), 95)
   })
 })
 
