@@ -15,28 +15,24 @@ describe('Checkout: invalid requests', function () {
 })
 
 describe('Checkout: valid requests', function () {
-  // it('Should return 130', function () {
-  //   assert.equal(checkout('AAA'), 130)
-  // })
-
   it('Should return 200', function () {
-    assert.equal(checkout('AAAAAAAA'), 200)
+    assert.equal(checkout('AAAAA'), 200)
   })
 
-  // it('Should return 115', function () {
-  //   assert.equal(checkout('ABCD'), 115)
-  // })
+  it('Should return 330', function () {
+    assert.equal(checkout('AAAAAAAA'), 330)
+  })
 
-  // it('Should return 130', function () {
-  //   assert.equal(checkout('AAA'), 130)
-  // })
+  it('Should return 245', function () {
+    assert.equal(checkout('AAAAABB'), 245)
+  })
 
-  // it('Should return 210', function () {
-  //   assert.equal(checkout('AAABBCD'), 210)
-  // })
+  it('Should return 320', function () {
+    assert.equal(checkout('AAAAABBCDE'), 320)
+  })
 
-  // it('Should return 0 if input is empty', function () {
-  //   assert.equal(checkout(''), 0)
-  // })
+  it('Should return 320', function () {
+    assert.equal(checkout('AAAAABBCDEE'), 320)
+  })
 })
 
