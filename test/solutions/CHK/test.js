@@ -48,18 +48,18 @@ describe('Checkout: valid requests', function () {
 
 
 
-  // it('Should return 160', function () {
-  //   assert.equal(checkout('EEEEBB'), 160)
-  // })
+//   it('Should return 160', function () {
+//     assert.equal(checkout('EEEEBB'), 160)
+//   })
 
-  // it('Should return 160', function () {
-  //   assert.equal(checkout('BEBEEE'), 160)
-  // })
+//   it('Should return 160', function () {
+//     assert.equal(checkout('BEBEEE'), 160)
+//   })
 
-  // it('Should return 280', function () {
-  //   assert.equal(checkout('ABCDEABCDE'), 280)
-  // })
-})
+//   it('Should return 280', function () {
+//     assert.equal(checkout('ABCDEABCDE'), 280)
+//   })
+// })
 
 
 /*
@@ -75,6 +75,7 @@ describe('Checkout: valid requests', function () {
 */
 
 // 40 + 40 + 40 + 40 + 30 + 30 - 60
+
 
 
 
