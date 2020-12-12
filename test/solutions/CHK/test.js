@@ -36,19 +36,17 @@ describe('Checkout: valid requests', function () {
 
 
 
-  // it('Should return 320', function () {
-  //   assert.equal(checkout('AAAAABBCDE'), 320)
-  // })
+  it('Should return 320', function () {
+    assert.equal(checkout('AAAAABBCDE'), 320)
+  })
 
-  // it('Should return 95', function () {
-  //   assert.equal(checkout('BBEE'), 95)
-  // })
+  it('Should return 110', function () {
+    assert.equal(checkout('BBEE'), 110)
+  })
 
   it('Should return 80', function () {
     assert.equal(checkout('EE'), 80)
   })
-
-
 
   it('Should return 160', function () {
     assert.equal(checkout('EEEEBB'), 160)
@@ -75,5 +73,7 @@ describe('Checkout: valid requests', function () {
 | E    | 40    | 2E get one B free      |
 +------+-------+------------------------+
 */
+
+// BBEE 30 30 40 40 - 30 = 110
 
 // 40 + 40 + 40 + 40 + 30 + 30 - 60
