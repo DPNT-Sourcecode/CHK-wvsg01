@@ -1,8 +1,8 @@
 var mocha = require('mocha')
 var describe = mocha.describe
 var it = mocha.it
-var assert = require('assert');
-const checkout = require('../../../lib/solutions/CHK/checkout');
+var assert = require('assert')
+const checkout = require('../../../lib/solutions/CHK/checkout')
 
 const invalidRequest1 = null
 const invalidRequest2 = 'INVALID'
@@ -10,27 +10,32 @@ const invalidRequest2 = 'INVALID'
 const validRequest1 = 'ABCD'
 const validRequest2 = 'AAA'
 const validRequest3 = 'AAABBCD'
+const validRequest4 = ''
 
 describe('Checkout: invalid requests', function () {
   it('Should return -1 if input is invalid', function () {
-    assert.equal(checkout(invalidRequest1), -1);
-  });
+    assert.equal(checkout(invalidRequest1), -1)
+  })
 
   it('Should return -1 if input is invalid', function () {
-    assert.equal(checkout(invalidRequest2), -1);
-  });
-});
+    assert.equal(checkout(invalidRequest2), -1)
+  })
+
+  it('Should return 0', function () {
+    assert.equal(checkout(validRequest4), 0)
+  })
+})
 
 describe('Checkout: valid requests', function () {
   it('Should return 115', function () {
-    assert.equal(checkout(validRequest1), 115);
-  });
+    assert.equal(checkout(validRequest1), 115)
+  })
 
   it('Should return 130', function () {
-    assert.equal(checkout(validRequest2), 130);
-  });
+    assert.equal(checkout(validRequest2), 130)
+  })
 
   it('Should return 210', function () {
-    assert.equal(checkout(validRequest3), 210);
-  });
-});
+    assert.equal(checkout(validRequest3), 210)
+  })
+})
