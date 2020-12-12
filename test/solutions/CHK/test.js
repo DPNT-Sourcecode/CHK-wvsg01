@@ -4,8 +4,15 @@ var it = mocha.it
 var assert = require('assert');
 const checkout = require('../../../lib/solutions/CHK/checkout');
 
-describe('Hello challenge: return param', function () {
-  it('Should return', function () {
-    assert.equal(hello('John'), 'Hello, John!');
+const request1 = 'ABCD'
+const request2 = 'AAABBCD'
+
+describe('Checkout', function () {
+  it('Should return -1 if input is invalid', function () {
+    assert.equal(checkout(''), -1);
   });
+
+  // it('Should return the price without promotions', function () {
+  //   assert.equal(checkout(request1), 115);
+  // });
 });
