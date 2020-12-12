@@ -47,8 +47,6 @@ describe('Checkout: valid requests', function () {
     assert.equal(checkout('BEBEEE'), 160)
   })
 
-  30 + 40 + 30 + 40 + 40 + 40 - (15 - 60)
-
   // it('Should return 280', function () {
   //   assert.equal(checkout('ABCDEABCDE'), 280)
   // })
@@ -68,3 +66,4 @@ describe('Checkout: valid requests', function () {
 */
 
 // 40 + 40 + 40 + 40 + 30 + 30 - 60
+
