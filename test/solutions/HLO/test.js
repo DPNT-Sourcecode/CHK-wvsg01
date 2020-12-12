@@ -6,6 +6,6 @@ const hello = require('../../../lib/solutions/HLO/hello');
 
 describe('Hello challenge: return param', function () {
   it('Should return', function () {
-    assert.equal(hello('Hello'), 'Hello');
+    assert.equal(hello('Hello'), 'Hello, World!');
   });
 });
