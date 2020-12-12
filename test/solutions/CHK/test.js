@@ -77,10 +77,3 @@ describe('Checkout: valid requests', function () {
 */
 
 // 40 + 40 + 40 + 40 + 30 + 30 - 60
-
-
-
-
-
-
-
