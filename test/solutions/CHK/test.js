@@ -128,6 +128,8 @@ describe('Checkout: valid requests', function () {
   // })
 })
 
+// >>>>> Group higher prices !!!
+
   // - { "method": "checkout", "params": ["SSSZ"], "id": "CHK_R5_142" }, expected: 65, got: 66
   //   - { "method": "checkout", "params": ["ZZZS"], "id": "CHK_R5_144" }, expected: 65, got: 66
   //     - { "method": "checkout", "params": ["STXZ"], "id": "CHK_R5_146" }, expected: 62, got: 66
