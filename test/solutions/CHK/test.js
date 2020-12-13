@@ -19,6 +19,10 @@ describe('Checkout: valid requests', function () {
     assert.equal(checkout(''), 0)
   })
 
+  it('Should return 180', function () {
+    assert.equal(checkout('AAAA'), 180)
+  })
+
   it('Should return 200', function () {
     assert.equal(checkout('AAAAA'), 200)
   })
@@ -27,37 +31,33 @@ describe('Checkout: valid requests', function () {
     assert.equal(checkout('AAAAABB'), 245)
   })
 
-  it('Should return 430', function () {
-    assert.equal(checkout('AAAAAAAAAA'), 430)
+  it('Should return 400', function () {
+    assert.equal(checkout('AAAAAAAAAA'), 400)
   })
 
-  // it('Should return 110', function () {
-  //   assert.equal(checkout('BBEE'), 110)
-  // })
+  it('Should return 330', function () {
+    assert.equal(checkout('AAAAAAAA'), 330)
+  })
 
-  // it('Should return 80', function () {
-  //   assert.equal(checkout('EE'), 80)
-  // })
+  it('Should return 280', function () {
+    assert.equal(checkout('ABCDEABCDE'), 280)
+  })
 
-  // it('Should return 160', function () {
-  //   assert.equal(checkout('EEEEBB'), 160)
-  // })
+  it('Should return 665', function () {
+    assert.equal(checkout('ABCDECBAABCABBAAAEEAA'), 665)
+  })
 
-  // it('Should return 160', function () {
-  //   assert.equal(checkout('BEBEEE'), 160)
-  // })
+  it('Should return 455', function () {
+    assert.equal(checkout('AAAAAEEBAAABB'), 455)
+  })
 
-  // it('Should return 280', function () {
-  //   assert.equal(checkout('ABCDEABCDE'), 280)
-  // })
+  it('Should return 160', function () {
+    assert.equal(checkout('EEEEBB'), 160)
+  })
 
-  // it('Should return 455', function () {
-  //   assert.equal(checkout('AAAAAEEBAAABB'), 455)
-  // })
-
-  // it('Should return 665', function () {
-  //   assert.equal(checkout('ABCDECBAABCABBAAAEEAA'), 665)
-  // })
+  it('Should return 160', function () {
+    assert.equal(checkout('BEBEEE'), 160)
+  })
 })
 
 
@@ -79,5 +79,6 @@ Our price table and offers:
 
   // - { "method": "checkout", "params": ["AAAAAEEBAAABB"], "id": "CHK_R2_040" }, expected: 455, got: 500
   //   - { "method": "checkout", "params": ["ABCDECBAABCABBAAAEEAA"], "id": "CHK_R2_001" }, expected: 665, got: 725
+
 
 
