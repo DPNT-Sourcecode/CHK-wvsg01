@@ -15,6 +15,10 @@ describe('Checkout: invalid requests', function () {
 })
 
 describe('Checkout: valid requests', function () {
+  it('Should return 160', function () {
+    assert.equal(checkout('EEEEBB'), 160)
+  })
+
   // it('Should return 110', function () {
   //   assert.equal(checkout('BBEE'), 110)
   // })
@@ -42,17 +46,6 @@ describe('Checkout: valid requests', function () {
   // it('Should return 665', function () {
   //   assert.equal(checkout('ABCDECBAABCABBAAAEEAA'), 665)
   // })
-
-
-
-
-  it('Should return 455', function () {
-    assert.equal(checkout('AAAAAEEBAAABB'), 455)
-  })
-
-  it('Should return 160', function () {
-    assert.equal(checkout('EEEEBB'), 160)
-  })
 })
 
 
