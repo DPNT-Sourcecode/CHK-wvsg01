@@ -8,10 +8,6 @@ describe('Checkout: invalid requests', function () {
   it('Should return -1 if input is null', function () {
     assert.equal(checkout(null), -1)
   })
-
-  it('Should return -1 if input is invalid', function () {
-    assert.equal(checkout('INVALID'), -1)
-  })
 })
 
 describe('Checkout: valid requests', function () {
