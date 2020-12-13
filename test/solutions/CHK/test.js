@@ -86,4 +86,8 @@ describe('Checkout: valid requests', function () {
   it('Should return 220', function () {
     assert.equal(checkout('AAAAAFFF'), 220)
   })
+
+  it('Should return 120', function () {
+    assert.equal(checkout('UUU'), 120)
+  })
 })
