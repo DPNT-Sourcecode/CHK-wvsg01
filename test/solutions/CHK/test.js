@@ -27,6 +27,10 @@ describe('Checkout: valid requests', function () {
     assert.equal(checkout('AAAAABB'), 245)
   })
 
+  it('Should return 430', function () {
+    assert.equal(checkout('AAAAAAAAAA'), 430)
+  })
+
   // it('Should return 110', function () {
   //   assert.equal(checkout('BBEE'), 110)
   // })
@@ -75,4 +79,5 @@ Our price table and offers:
 
   // - { "method": "checkout", "params": ["AAAAAEEBAAABB"], "id": "CHK_R2_040" }, expected: 455, got: 500
   //   - { "method": "checkout", "params": ["ABCDECBAABCABBAAAEEAA"], "id": "CHK_R2_001" }, expected: 665, got: 725
+
 
