@@ -15,8 +15,16 @@ describe('Checkout: invalid requests', function () {
 })
 
 describe('Checkout: valid requests', function () {
-  it('Should return 160', function () {
-    assert.equal(checkout('EEEEBB'), 160)
+  it('Should return 0', function () {
+    assert.equal(checkout(''), 0)
+  })
+
+  it('Should return 200', function () {
+    assert.equal(checkout('AAAAA'), 200)
+  })
+
+  it('Should return 245', function () {
+    assert.equal(checkout('AAAAABB'), 245)
   })
 
   // it('Should return 110', function () {
@@ -67,3 +75,4 @@ Our price table and offers:
 
   // - { "method": "checkout", "params": ["AAAAAEEBAAABB"], "id": "CHK_R2_040" }, expected: 455, got: 500
   //   - { "method": "checkout", "params": ["ABCDECBAABCABBAAAEEAA"], "id": "CHK_R2_001" }, expected: 665, got: 725
+
