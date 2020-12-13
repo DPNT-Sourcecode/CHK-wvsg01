@@ -51,6 +51,10 @@ describe('Checkout: valid requests', function () {
     assert.equal(checkout('AAAAAEEBAAABB'), 455)
   })
 
+  it('Should return 665', function () {
+    assert.equal(checkout('ABCDECBAABCABBAAAEEAA'), 665)
+  })
+
   it('Should return 160', function () {
     assert.equal(checkout('EEEEBB'), 160)
   })
@@ -59,26 +63,3 @@ describe('Checkout: valid requests', function () {
     assert.equal(checkout('BEBEEE'), 160)
   })
 })
-
-
-/*
-
-Our price table and offers:
-+------+-------+------------------------+
-| Item | Price | Special offers         |
-+------+-------+------------------------+
-| A    | 50    | 3A for 130, 5A for 200 |
-| B    | 30    | 2B for 45              |
-| C    | 20    |                        |
-| D    | 15    |                        |
-| E    | 40    | 2E get one B free      |
-+------+-------+------------------------+
-
-*/
-
-
-  // - { "method": "checkout", "params": ["AAAAAEEBAAABB"], "id": "CHK_R2_040" }, expected: 455, got: 500
-  //   - { "method": "checkout", "params": ["ABCDECBAABCABBAAAEEAA"], "id": "CHK_R2_001" }, expected: 665, got: 725
-
-
-
